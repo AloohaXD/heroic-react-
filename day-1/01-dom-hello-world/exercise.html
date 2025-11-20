@@ -24,25 +24,40 @@
     <!-- Your JavaScript will add content here -->
 
     <script>
-      // TODO: Create a div element
-      // Hint: const element = document.createElement('...')
+      // EXERCISE: Build a "Hello World" using vanilla JavaScript DOM manipulation
 
-      // TODO: Set the text content to "Hello World"
-      // Hint: element.textContent = '...'
+      // STEP 1: Create a div element
+      // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+      // The createElement method takes a tag name as a string parameter
 
-      // TODO: Add a className "container"
-      // Hint: element.className = '...'
+      // STEP 2: Set the text content
+      // You can use either .textContent or .innerHTML property
+      // Set it to "Hello World"
 
-      // TODO: Style the element using JavaScript
-      // Hint: element.style.propertyName = 'value'
-      // Try: color, fontSize, padding, backgroundColor, borderRadius, textAlign
+      // STEP 3: Add a CSS class
+      // Use the .className property to add "container" class
 
-      // TODO: Append the element to the document body
-      // Hint: document.body.appendChild(element)
+      // STEP 4: Add inline styles using the .style property
+      // You'll need to set multiple style properties:
+      // - color (try 'white')
+      // - fontSize (try '48px')
+      // - padding (try '40px')
+      // - backgroundColor (try 'rgba(255, 255, 255, 0.1)')
+      // - borderRadius (try '16px')
+      // - textAlign (try 'center')
+      // Note: CSS properties in JS use camelCase (background-color → backgroundColor)
 
-      // BONUS: Create another element with your name
+      // STEP 5: Append to the DOM
+      // Use document.body.appendChild() to add your element to the page
 
-      // BONUS: Create a button that changes the text
+      // BONUS CHALLENGE 1: Create a second element (like a paragraph) with your name
+      // Follow the same steps as above but use 'p' tag instead of 'div'
+
+      // BONUS CHALLENGE 2: Add a button that changes the text when clicked
+      // 1. Create a button element
+      // 2. Set its text to "Click Me"
+      // 3. Add an event listener: button.addEventListener('click', function() { ... })
+      // 4. Inside the function, change the div's textContent to something new
     </script>
   </body>
 </html>
