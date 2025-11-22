@@ -17,11 +17,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
       }
     </style>
   </head>
   <body>
-    <!-- Your JavaScript will add content here -->
 
     <script>
       // EXERCISE: Build a "Hello World" using vanilla JavaScript DOM manipulation
@@ -29,13 +29,16 @@
       // STEP 1: Create a div element
       // MDN Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
       // The createElement method takes a tag name as a string parameter
+      const element = document.createElement('div');
 
       // STEP 2: Set the text content
       // You can use either .textContent or .innerHTML property
       // Set it to "Hello World"
+      element.textContent = 'Wuryo Hisyam Taruna';
 
       // STEP 3: Add a CSS class
       // Use the .className property to add "container" class
+      element.className = 'container';
 
       // STEP 4: Add inline styles using the .style property
       // You'll need to set multiple style properties:
@@ -46,18 +49,57 @@
       // - borderRadius (try '16px')
       // - textAlign (try 'center')
       // Note: CSS properties in JS use camelCase (background-color → backgroundColor)
+      element.style.color = 'black';
+      element.style.fontSize = '62px';
+      element.style.padding = '30px 60px';
+      element.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+      element.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+      element.style.fontFamily = 'Unispace';
 
       // STEP 5: Append to the DOM
       // Use document.body.appendChild() to add your element to the page
+      document.body.appendChild(element);
 
       // BONUS CHALLENGE 1: Create a second element (like a paragraph) with your name
       // Follow the same steps as above but use 'p' tag instead of 'div'
+      const nameElement = document.createElement('div');
+      nameElement.textContent = 'Welcome To Our Jungle';
+      nameElement.style.color = 'black';
+      nameElement.style.fontSize = '24px';
+      nameElement.style.padding = '15px 30px';
+      nameElement.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+      element.style.borderRadius = '16px';
+      element.style.textAlign = 'center';
+      element.style.fontFamily = 'Unispace';
+      document.body.appendChild(nameElement);
+
 
       // BONUS CHALLENGE 2: Add a button that changes the text when clicked
       // 1. Create a button element
       // 2. Set its text to "Click Me"
       // 3. Add an event listener: button.addEventListener('click', function() { ... })
       // 4. Inside the function, change the div's textContent to something new
+      const button = document.createElement('button');
+      button.textContent = 'Touch Me PLLLLS!';
+      button.style.padding = '12px 24px';
+      button.style.fontSize = '18px';
+      button.style.border = 'none';
+      button.style.borderRadius = '8px';
+
+      button.addEventListener('mouseenter', () => {
+        button.style.transform = 'scale(1.05)';
+      });
+
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'scale(1)';
+      });
+
+      button.addEventListener('click', () => {
+        element.textContent = 'Selamat Anda Mendapatkan Fine Shyt!';
+        button.textContent = 'Click Again!';
+      });
+
+      document.body.appendChild(button);
     </script>
   </body>
 </html>
